@@ -1,0 +1,108 @@
+.sidebar {
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06) !important;
+    z-index: 2;
+}
+
+.day {
+    color: #90A0B7;
+    font-size: .75rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 19px;
+}
+
+.dayActive {
+    color: #109CF1 !important;
+}
+
+.date {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 22px;
+    color: #192A3E;
+}
+
+.task-title {
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: #323C47;
+
+}
+
+.btn-msg {
+    background-color: #FFB946;
+    border-color: #FFB946;
+}
+
+.btn-msg:hover {
+    background-color: #FFB946;
+    border-color: #FFB946;
+}
+
+.circle {
+    border: 8px solid #2ED47A;
+    border-radius: 50%;
+    padding-top: 100%;
+
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+}
+
+
+.perc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.perc-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sig-canvas {
+    background-image: url(../img/tremor/Spiral_image.jpg) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 100%;
+    border: 1px solid black;
+    margin: auto;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.test {
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+}
+
+.small-img {
+    display: flex;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.one-line {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.logo {
+    color: #109CF1 !important;
+    /* font-weight: bold; */
+    font-size: ;
+}
