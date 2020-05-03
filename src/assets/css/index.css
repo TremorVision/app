@@ -40,7 +40,7 @@
     border-color: #FFB946;
 }
 
-.circle {
+/* .circle {
     border: 8px solid #2ED47A;
     border-radius: 50%;
     padding-top: 100%;
@@ -49,7 +49,7 @@
     overflow: hidden;
     padding-top: 100%;
     position: relative;
-}
+} */
 
 
 .perc {
@@ -67,8 +67,8 @@
     justify-content: center;
 }
 .sig-canvas {
-    background-image: url(../img/tremor/Spiral_image.jpg) !important;
-    background-size: 100% !important;
+    background-image: url(../img/tremor/spiral.png) !important;
+    background-size: 75% !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     width: 100%;

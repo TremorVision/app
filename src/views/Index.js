@@ -21,7 +21,7 @@ import classnames from "classnames";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar, Doughnut } from "react-chartjs-2";
 // reactstrap components
 
 import moment from 'moment';
@@ -54,6 +54,16 @@ import {
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
+
+const data = {
+	datasets: [{
+		data: [82, 18],
+		backgroundColor: [
+    '#2ED47A',
+    '#8898aa'
+		]
+	}]
+};
 
 class Index extends React.Component {
   constructor(props) {
@@ -95,8 +105,6 @@ class Index extends React.Component {
     }
     return days;
   }
-
-
 
 
   render() {
@@ -231,8 +239,15 @@ class Index extends React.Component {
                     <CardHeader> Daily Message</CardHeader>
                     <CardBody>
                       <Row>
-                        <Col xs='6'><div className='circle oneline'><h1 class="display-1 text-success perc"><div className='perc-center'>82%</div></h1></div></Col>
-                        <Col xs='6'>No Data Collected today, press the button below to get started.</Col>
+                        <Col xs='6'>
+                          <div className='circle oneline'>
+                            <Doughnut data={data}/>
+                            <h1 class="display-1 text-success perc">
+                              <div className='perc-center'>82%</div>
+                            </h1>
+                          </div>
+                        </Col>
+                        <Col xs='6'>No data collected today, press the button below to get started.</Col>
                       </Row>
                       <div className='d-flex justify-content-between'>
                         <div></div>
