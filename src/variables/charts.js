@@ -242,7 +242,7 @@ function chartOptions() {
       color: mode === "dark" ? colors.gray[900] : colors.gray[300],
       drawBorder: false,
       drawTicks: false,
-      lineWidth: 0,
+      lineWidth: 0.5,
       zeroLineWidth: 0,
       zeroLineColor: mode === "dark" ? colors.gray[900] : colors.gray[300],
       zeroLineBorderDash: [2],
