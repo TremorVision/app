@@ -9,11 +9,17 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
     originalDoughnutDraw.apply(this, arguments);
     
     var chart = this.chart;
-    var width = chart.chart.width,
-        height = chart.chart.height,
-        ctx = chart.chart.ctx;
+    var width = chart.chart.width;
+    if (width > 205) {
+      var height = chart.chart.height * 0.8;
+      var fontSize = (height / 50).toFixed(2); //def: 114
+    } else {
+      var height = chart.chart.height * 0.6;
+      var fontSize = (height / 50).toFixed(2); //def: 114
+    }
+    var ctx = chart.chart.ctx;
 
-    var fontSize = (height / 50).toFixed(2); //def: 114
+    
     ctx.font = 'bold ' + fontSize + "em poppins";
     ctx.textBaseline = "middle";
     
@@ -25,7 +31,7 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
 
     var text = Math.round((chart.config.data.datasets[0].data[0] / sum) * 100).toString() + "%",
         textX = Math.round((width - ctx.measureText(text).width) / 2),
-        textY = height / 2;
+        textY = height * 0.5;
     
     ctx.fillStyle = "#2DCE89";
     ctx.fillText(text, textX, textY);
