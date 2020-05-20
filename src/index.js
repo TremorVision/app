@@ -25,14 +25,12 @@ import "assets/css/argon-dashboard-react.css";
 
 
 import "assets/css/index.css";
-
+import "./web.config";
 import AdminLayout from "layouts/Admin.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      
-      <Route exact path="/" render={props => <AdminLayout {...props} />} />
       <Route path="/home" render={props => <AdminLayout {...props} />} />
       <Redirect from="/" to="/home/index" />
     </Switch>
