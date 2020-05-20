@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8a37a0b75802a4cc07409ccf55b883e",
+    "revision": "c2003b337ee1e0846f9a2a7e02a99713",
     "url": "/argon-dashboard-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/argon-dashboard-react/static/css/2.2a5b176f.chunk.css"
   },
   {
-    "revision": "de69d9840acc2e6be0ea",
+    "revision": "577e973a979188f488ff",
     "url": "/argon-dashboard-react/static/css/main.01f55687.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/argon-dashboard-react/static/js/2.b5b73c9b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de69d9840acc2e6be0ea",
-    "url": "/argon-dashboard-react/static/js/main.d695fa22.chunk.js"
+    "revision": "577e973a979188f488ff",
+    "url": "/argon-dashboard-react/static/js/main.1bd70170.chunk.js"
   },
   {
     "revision": "8d0d562f4ec3c131ac27d52de65ecd17",
-    "url": "/argon-dashboard-react/static/js/main.d695fa22.chunk.js.LICENSE.txt"
+    "url": "/argon-dashboard-react/static/js/main.1bd70170.chunk.js.LICENSE.txt"
   },
   {
     "revision": "d7efe9ad4bba48af8615",

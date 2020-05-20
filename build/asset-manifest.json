@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/argon-dashboard-react/static/css/main.01f55687.chunk.css",
-    "main.js": "/argon-dashboard-react/static/js/main.d695fa22.chunk.js",
-    "main.js.map": "/argon-dashboard-react/static/js/main.d695fa22.chunk.js.map",
+    "main.js": "/argon-dashboard-react/static/js/main.1bd70170.chunk.js",
+    "main.js.map": "/argon-dashboard-react/static/js/main.1bd70170.chunk.js.map",
     "runtime-main.js": "/argon-dashboard-react/static/js/runtime-main.592593bb.js",
     "runtime-main.js.map": "/argon-dashboard-react/static/js/runtime-main.592593bb.js.map",
     "static/css/2.2a5b176f.chunk.css": "/argon-dashboard-react/static/css/2.2a5b176f.chunk.css",
     "static/js/2.b5b73c9b.chunk.js": "/argon-dashboard-react/static/js/2.b5b73c9b.chunk.js",
     "static/js/2.b5b73c9b.chunk.js.map": "/argon-dashboard-react/static/js/2.b5b73c9b.chunk.js.map",
     "index.html": "/argon-dashboard-react/index.html",
-    "precache-manifest.d1c029609d891cee7b4f7f83dcc28013.js": "/argon-dashboard-react/precache-manifest.d1c029609d891cee7b4f7f83dcc28013.js",
+    "precache-manifest.9fbd21c2d2d0af36fae47c79c87fd27c.js": "/argon-dashboard-react/precache-manifest.9fbd21c2d2d0af36fae47c79c87fd27c.js",
     "service-worker.js": "/argon-dashboard-react/service-worker.js",
     "static/css/2.2a5b176f.chunk.css.map": "/argon-dashboard-react/static/css/2.2a5b176f.chunk.css.map",
     "static/css/main.01f55687.chunk.css.map": "/argon-dashboard-react/static/css/main.01f55687.chunk.css.map",
     "static/js/2.b5b73c9b.chunk.js.LICENSE.txt": "/argon-dashboard-react/static/js/2.b5b73c9b.chunk.js.LICENSE.txt",
-    "static/js/main.d695fa22.chunk.js.LICENSE.txt": "/argon-dashboard-react/static/js/main.d695fa22.chunk.js.LICENSE.txt",
+    "static/js/main.1bd70170.chunk.js.LICENSE.txt": "/argon-dashboard-react/static/js/main.1bd70170.chunk.js.LICENSE.txt",
     "static/media/Spiral_image.jpg": "/argon-dashboard-react/static/media/Spiral_image.e542fc02.jpg",
     "static/media/angular.jpg": "/argon-dashboard-react/static/media/angular.368685db.jpg",
     "static/media/argon-react-white.png": "/argon-dashboard-react/static/media/argon-react-white.275a2629.png",
@@ -39,6 +39,6 @@
     "static/css/2.2a5b176f.chunk.css",
     "static/js/2.b5b73c9b.chunk.js",
     "static/css/main.01f55687.chunk.css",
-    "static/js/main.d695fa22.chunk.js"
+    "static/js/main.1bd70170.chunk.js"
   ]
 }
