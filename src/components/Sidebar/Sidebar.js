@@ -206,7 +206,7 @@ class Sidebar extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="mailto:janaechanone@gmail.com">
+                <NavLink href="mailto:tremorvisionapp@gmail.com">
                   Contact us
                 </NavLink>
               </NavItem>
