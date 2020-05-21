@@ -31,21 +31,21 @@ var routes = [
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
-    layout: "/admin"
+    layout: "/app"
   },
   {
     path: "/history",
     name: "History",
     icon: "ni ni-bullet-list-67 text-primary",
     component: Index,
-    layout: "/admin"
+    layout: "/app"
   },
   {
     path: "/messages",
     name: "Messages",
     icon: "ni ni-email-83 text-primary",
     component: Index,
-    layout: "/admin"
+    layout: "/app"
   }
   // {
   //   path: "/icons",

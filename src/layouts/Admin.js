@@ -35,7 +35,7 @@ class Admin extends React.Component {
   }
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/app") {
         console.log(prop.layout + prop.path);
         return (
           <Route
@@ -79,7 +79,7 @@ class Admin extends React.Component {
           
           <Switch>
             {this.getRoutes(routes)}
-            <Redirect from="*" to="/admin/index" />
+            <Redirect from="*" to="/app/index" />
           </Switch>
 
 
