@@ -55,12 +55,12 @@ class AdminNavbar extends React.Component {
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="..."
-                        src={require("assets/img/theme/team-4-800x800.jpg")}
+                        src={require("assets/img/theme/janaechan.png")}
                       />
                     </span>
                     <Media className="ml-2 d-none d-lg-block">
                       <span className="mb-0 text-sm font-weight-bold .font-darker">
-                        Lillian Cardenas {/* replace with user name*/}
+                         Janae Chan {/* replace with user name*/}
                       </span>
                     </Media>
                   </Media>
@@ -69,15 +69,15 @@ class AdminNavbar extends React.Component {
                   <DropdownItem className="noti-title" header tag="div">
                     <h6 className="text-overflow m-0">Welcome!</h6>
                   </DropdownItem>
-                  <DropdownItem to="/admin/user-profile" tag={Link}>
+                  <DropdownItem to="/app/user-profile" tag={Link}>
                     <i className="ni ni-single-02" />
                     <span>My profile</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/user-profile" tag={Link}>
+                  <DropdownItem to="/app/user-profile" tag={Link}>
                     <i className="ni ni-settings-gear-65" />
                     <span>Settings</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/user-profile" tag={Link}>
+                  <DropdownItem to="/app/user-profile" tag={Link}>
                     <i className="ni ni-support-16" />
                     <span>Support</span>
                   </DropdownItem>
