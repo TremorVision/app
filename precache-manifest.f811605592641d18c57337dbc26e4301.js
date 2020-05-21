@@ -1,39 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7547f81e3db22fa13093b392030bb2e",
+    "revision": "31e3546e12419bf36d371ed9f4a6afe5",
     "url": "/app/index.html"
   },
   {
-    "revision": "62b3349dc0d90103d0bd",
+    "revision": "311cccc7e446cccae239",
     "url": "/app/static/css/2.e4796f11.chunk.css"
   },
   {
-    "revision": "be4d564bfad4a3cf76ae",
-    "url": "/app/static/css/main.dab07713.chunk.css"
+    "revision": "803d6aa39f41a629e0c3",
+    "url": "/app/static/css/main.0ab897ac.chunk.css"
   },
   {
-    "revision": "62b3349dc0d90103d0bd",
-    "url": "/app/static/js/2.b1e6d3d2.chunk.js"
+    "revision": "311cccc7e446cccae239",
+    "url": "/app/static/js/2.86378c21.chunk.js"
   },
   {
     "revision": "6cb5389cdbe25e7820e28de2484e4cf1",
-    "url": "/app/static/js/2.b1e6d3d2.chunk.js.LICENSE.txt"
+    "url": "/app/static/js/2.86378c21.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "be4d564bfad4a3cf76ae",
-    "url": "/app/static/js/main.729b9dbf.chunk.js"
+    "revision": "803d6aa39f41a629e0c3",
+    "url": "/app/static/js/main.73c9970b.chunk.js"
   },
   {
     "revision": "8d0d562f4ec3c131ac27d52de65ecd17",
-    "url": "/app/static/js/main.729b9dbf.chunk.js.LICENSE.txt"
+    "url": "/app/static/js/main.73c9970b.chunk.js.LICENSE.txt"
   },
   {
     "revision": "acc57dc7dc2dd0d27129",
     "url": "/app/static/js/runtime-main.8d884e7e.js"
-  },
-  {
-    "revision": "e542fc02d04b969ce0cef5083368f5d7",
-    "url": "/app/static/media/Spiral_image.e542fc02.jpg"
   },
   {
     "revision": "368685db949cddcd901ba54559a727d9",
@@ -104,12 +100,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/app/static/media/fa-solid-900.ec763292.svg"
   },
   {
+    "revision": "7be79e977eb1ef056782cd5988c27f27",
+    "url": "/app/static/media/geruh.7be79e97.jpeg"
+  },
+  {
     "revision": "4ffd4fe7945af123788bf5888296c696",
     "url": "/app/static/media/github.4ffd4fe7.svg"
   },
   {
     "revision": "87be59a1f7061fc6021876aad6fee028",
     "url": "/app/static/media/google.87be59a1.svg"
+  },
+  {
+    "revision": "aaf1056d9078a74fe5fc13de3fdd11d3",
+    "url": "/app/static/media/janaechan.aaf1056d.png"
   },
   {
     "revision": "0b8a30b10cbe7708d5f3a4b007c1d665",
