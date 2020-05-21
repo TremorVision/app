@@ -83,7 +83,8 @@ class Index extends React.Component {
     super(props);
     this.state = {
       activeNav: 1,
-      chartExample1Data: "data1"
+      chartExample1Data: "data1",
+      isFinished: "Not Done"
     };
     if (window.Chart) {
       parseOptions(Chart, chartOptions());
@@ -91,11 +92,13 @@ class Index extends React.Component {
   }
   toggleNavs = (e, index) => {
     e.preventDefault();
-    this.setState({
-      activeNav: index,
-      chartExample1Data:
-        this.state.chartExample1Data === "data1" ? "data2" : "data1"
-    });
+    if (this.state.activeNav != index) {
+      this.setState({
+        activeNav: index,
+        chartExample1Data:
+          this.state.chartExample1Data === "data1" ? "data2" : "data1"
+      });
+    }
   };
 
 
@@ -118,6 +121,14 @@ class Index extends React.Component {
     return days;
   }
 
+  spiralTestFinished = () => {
+    this.setState({
+      isFinished: "Complete"
+    })
+    var property = document.getElementById("task-btn");
+    property.style.backgroundColor = "#2dce89";
+    property.style.borderColor = "#2dce89";
+  }
 
   render() {
 
@@ -158,20 +169,20 @@ class Index extends React.Component {
                             <CardText><small class="text-muted">Reminder</small></CardText>
                           </Col>
                         </Row>
-                        <Row><Col><small class="text-muted">Due date: May 5th, 2020</small></Col></Row>
+                        <Row><Col><small class="text-muted">Due date: {moment().format("LL")} </small></Col></Row>
 
                         <div className='d-flex justify-content-between'>
                           <div className="d-flex align-items-center">
                             <span className="avatar avatar-sm rounded-circle">
                               <img
                                 alt="..."
-                                src={require("assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/geruh.jpeg")}
                               />
                             </span>
-                            <small class="text-muted ml-2">Dr. Anne Nealson</small>
+                            <small class="text-muted ml-2">Dr. Drew Gallardo</small>
                           </div>
 
-                          <Button color="primary" className='btn-msg' size="lg" type="button">Not Done</Button>
+                          <Button color="primary" id='task-btn' className='btn-msg' size="lg" type="button">{this.state.isFinished}</Button>
                         </div>
                       </Card>
                     </Col>
@@ -188,17 +199,17 @@ class Index extends React.Component {
                             <CardText><small class="text-muted">Reminder</small></CardText>
                           </Col>
                         </Row>
-                        <Row><Col><small class="text-muted">Due date: May 5th, 2020</small></Col></Row>
+                        <Row><Col><small class="text-muted">Due date: {moment().format("LL")}</small></Col></Row>
 
                         <div className='d-flex justify-content-between'>
                           <div className="d-flex align-items-center">
                             <span className="avatar avatar-sm rounded-circle">
                               <img
                                 alt="..."
-                                src={require("assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/geruh.jpeg")}
                               />
                             </span>
-                            <small class="text-muted ml-2">Dr. Anne Nealson</small>
+                            <small class="text-muted ml-2">Dr.  Drew Gallardo</small>
                           </div>
 
                           <Button color="primary" className='btn-msg' size="lg" type="button">Not Done</Button>
@@ -218,20 +229,20 @@ class Index extends React.Component {
                             <CardText><small class="text-muted">Reminder</small></CardText>
                           </Col>
                         </Row>
-                        <Row><Col><small class="text-muted">Due date: May 4th, 2020</small></Col></Row>
+                        <Row><Col><small class="text-muted">Due date: {moment().subtract(1, 'days').format("LL")}</small></Col></Row>
 
                         <div className='d-flex justify-content-between'>
                           <div className="d-flex align-items-center">
                             <span className="avatar avatar-sm rounded-circle">
                               <img
                                 alt="..."
-                                src={require("assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/geruh.jpeg")}
                               />
                             </span>
-                            <small class="text-muted ml-2">Dr. Anne Nealson</small>
+                            <small class="text-muted ml-2">Dr. Drew Gallardo</small>
                           </div>
 
-                          <Button color="success" size="lg" type="button">Completed</Button>
+                          <Button color="success" size="lg" type="button">Complete</Button>
                         </div>
                       </Card>
                     </Col>
@@ -268,7 +279,7 @@ class Index extends React.Component {
                       </Row>
                       <div className='d-flex justify-content-between'>
                         <div></div>
-                        <Modal buttonLabel='Not Done' /> {/* pass in callback */}
+                        <Modal buttonLabel="Not Done" callback={this.spiralTestFinished}/> {/* pass in callback */}
                       </div>
                     </CardBody>
                   </Card>

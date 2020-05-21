@@ -2,13 +2,13 @@ import React, { useState, createRef, useRef } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 // import Canvas from '../dash/canvas'
 import CanvasDraw from 'react-canvas-draw'
-import spiral from '../../assets/img/tremor/Spiral_image.jpg'
 
 
 class ModalTest extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            intructions: 'Trace the entire spiral and press evaluate.',
             modal: false,
             results: false,
             resultText: ''
@@ -111,6 +111,24 @@ class ModalTest extends React.Component {
             resultText: '',
             modal: false
         })
+        var property = document.getElementById("test-btn");
+        property.innerHTML = "Complete";
+        property.style.backgroundColor = "#2dce89";
+        property.style.borderColor = "#2dce89";
+        this.props.callback();
+    }
+
+    isCanvasBlank(e, data, dataURL) {
+        if (JSON.parse(data)["lines"].length == 0) {
+            this.setState({
+                intructions: 'Please trace the entire spiral before evaluating.'
+            })
+            var property = document.getElementById("help-txt");
+            property.classList.add("fading");
+            setTimeout(function(){property.classList.remove("fading");}, 2000);
+        } else {
+            { this.pingPlatform(e, dataURL) }
+        }
     }
 
     render() {
@@ -142,7 +160,7 @@ class ModalTest extends React.Component {
         } else {
             content = <>
                 <ModalBody className='text-center'>
-                    <p className='text-muted'>Trace the entire spiral and press evaluate.</p>
+                <p id='help-txt' className='text-muted'>{this.state.intructions}</p>
                     <div className='test mt-2'>
                         <CanvasDraw
                             className='mx-auto sig-canvas'
@@ -162,18 +180,18 @@ class ModalTest extends React.Component {
                         color="secondary"
                         onClick={() => { this.saveableCanvas.clear() }}
                     >Clear</Button>{' '}
+                    
                     <Button
                         color="primary"
-                        onClick={(e) => { this.pingPlatform(e, this.saveableCanvas.canvasContainer.children[1].toDataURL()) }}
+                        onClick={(e) => {this.isCanvasBlank(e, this.saveableCanvas.getSaveData(),this.saveableCanvas.canvasContainer.children[1].toDataURL() )}}
                     >Evaluate</Button>
                 </ModalFooter>
             </>
         }
 
-
         return (
             <div>
-                <Button color="primary" size='lg' className='btn-msg' onClick={this.toggle}>{this.props.buttonLabel}</Button>
+                <Button color="primary" size='lg' id="test-btn" className='btn-msg' onClick={this.toggle}>{this.props.buttonLabel}</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle} className='modal-header'><h3>Spiral Drawing Test</h3></ModalHeader>
                     {content}
