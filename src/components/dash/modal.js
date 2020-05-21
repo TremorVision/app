@@ -125,7 +125,7 @@ class ModalTest extends React.Component {
             })
             var property = document.getElementById("help-txt");
             property.classList.add("fading");
-            setTimeout(function(){property.classList.remove("fading");}, 2000);
+            setTimeout(function(){property.classList.remove("fading");}, 1000);
         } else {
             { this.pingPlatform(e, dataURL) }
         }
