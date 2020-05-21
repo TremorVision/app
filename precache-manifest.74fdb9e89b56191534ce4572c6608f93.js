@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31e3546e12419bf36d371ed9f4a6afe5",
+    "revision": "e2ae77b4a6060d499fa6a9d76227c225",
     "url": "/app/index.html"
   },
   {
-    "revision": "311cccc7e446cccae239",
+    "revision": "063134a215dcc4e0a739",
     "url": "/app/static/css/2.e4796f11.chunk.css"
   },
   {
-    "revision": "803d6aa39f41a629e0c3",
+    "revision": "f3146b79af90e30a328f",
     "url": "/app/static/css/main.0ab897ac.chunk.css"
   },
   {
-    "revision": "311cccc7e446cccae239",
-    "url": "/app/static/js/2.86378c21.chunk.js"
+    "revision": "063134a215dcc4e0a739",
+    "url": "/app/static/js/2.6675ba5d.chunk.js"
   },
   {
     "revision": "6cb5389cdbe25e7820e28de2484e4cf1",
-    "url": "/app/static/js/2.86378c21.chunk.js.LICENSE.txt"
+    "url": "/app/static/js/2.6675ba5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "803d6aa39f41a629e0c3",
-    "url": "/app/static/js/main.73c9970b.chunk.js"
+    "revision": "f3146b79af90e30a328f",
+    "url": "/app/static/js/main.8d3aa473.chunk.js"
   },
   {
     "revision": "8d0d562f4ec3c131ac27d52de65ecd17",
-    "url": "/app/static/js/main.73c9970b.chunk.js.LICENSE.txt"
+    "url": "/app/static/js/main.8d3aa473.chunk.js.LICENSE.txt"
   },
   {
     "revision": "acc57dc7dc2dd0d27129",
@@ -34,6 +34,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "368685db949cddcd901ba54559a727d9",
     "url": "/app/static/media/angular.368685db.jpg"
+  },
+  {
+    "revision": "275a2629582aa2af3469364c6748cf38",
+    "url": "/app/static/media/argon-react-white.275a2629.png"
+  },
+  {
+    "revision": "f38ddea9dedadea03c5d43c596dac13f",
+    "url": "/app/static/media/argon-react.f38ddea9.png"
   },
   {
     "revision": "ab904daa548967670847fc3929bf50f4",
@@ -112,10 +120,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/app/static/media/google.87be59a1.svg"
   },
   {
-    "revision": "aaf1056d9078a74fe5fc13de3fdd11d3",
-    "url": "/app/static/media/janaechan.aaf1056d.png"
-  },
-  {
     "revision": "0b8a30b10cbe7708d5f3a4b007c1d665",
     "url": "/app/static/media/nucleo-icons.0b8a30b1.svg"
   },
@@ -170,9 +174,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9378e368a757bd0c7ca556a0258cb527",
     "url": "/app/static/media/vue.9378e368.jpg"
-  },
-  {
-    "revision": "7072ea2c14ab0f3fe7a3b3750f588595",
-    "url": "/app/static/media/web.7072ea2c.config"
   }
 ]);
