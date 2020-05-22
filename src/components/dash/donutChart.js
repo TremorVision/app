@@ -41,7 +41,11 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
 const options = {
   legend: {
     display: true,
-    position: 'bottom'
+    position: 'bottom',
+    onClick: null
+  },
+  tooltips: {
+    mode: 'point'
   }
 }
 
