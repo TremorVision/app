@@ -56,7 +56,7 @@ class About extends React.Component {
             <section id="about">
                 <div>
                     <h4>About Us</h4>
-                    <span class="subhead">OUR STORY</span>
+                    <span class="subhead">Our Story</span>
                     <p id="about-txt">TremorVision started off as a hackathon project in October 2019, 
                     and the idea stemmed from our passion about utilizing technology to tackle problems 
                     in health; creating something simple yet impactful. Parkinson’s Disease (PD) is the 
@@ -87,11 +87,11 @@ class About extends React.Component {
             
             <CardBody>
             <div>
-            <span class="subhead">Connect with us!</span>
+            <span class="subhead">Our Team</span>
             </div>
                 <Row className='w-100 mx-auto'>
                 <Col className='px-0'>
-                    <Card style={{ width: "15rem" }}>
+                    <Card class='card' style={{ width: "15rem" }}>
                     <a href="https://www.linkedin.com/in/brandon-hong-591734128/">
                     <CardImg
                         alt="Janae Chan"
