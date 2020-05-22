@@ -75,8 +75,25 @@ class Sidebar extends React.Component {
     });
   };
 
+  createAboutMeLink =  aboutMe => {
+    return aboutMe.map((prop, key) => {
+      return (
+        <NavItem key={key}>
+          <NavLink
+            to={prop.layout + prop.path}
+            tag={NavLinkRRD}
+            onClick={this.closeCollapse}
+            activeClassName="active"
+          >
+            {prop.name}
+          </NavLink>
+        </NavItem>
+      );
+    });
+  };
+
   render() {
-    const { bgColor, routes, logo } = this.props;
+    const { bgColor, routes, aboutMe, logo } = this.props;
     let navbarBrandProps;
 
     if (logo && logo.innerLink) {
@@ -188,24 +205,14 @@ class Sidebar extends React.Component {
             {/* Heading */}
             {/* <h6 className="navbar-heading text-muted">Documentation</h6> */}
             {/* Navigation */}
-            <Nav className="mb-md-3" navbar>
-              <NavItem>
-                <NavLink
-                  to="/app/about"
-                  tag={NavLinkRRD}
-                  onClick={this.closeCollapse}
-                  activeClassName="active"
-                >
-                  {/* <i className="fas fa-users text-primary" /> */}
-                  About Us
-                </NavLink>
-              </NavItem>
+            <Nav className="mb-md-3" navbar>{this.createAboutMeLink(aboutMe)}
+              
               <NavItem>
                 <NavLink href="mailto:tremorvisionapp@gmail.com">
                   Contact Us
                 </NavLink>
               </NavItem>
-            </Nav>
+              </Nav>
           </Collapse>
         </Container>
       </Navbar>
@@ -214,12 +221,14 @@ class Sidebar extends React.Component {
 }
 
 Sidebar.defaultProps = {
-  routes: [{}]
+  routes: [{}],
+  aboutMe: [{}]
 };
 
 Sidebar.propTypes = {
   // links that will be displayed inside the component
   routes: PropTypes.arrayOf(PropTypes.object),
+  aboutMe: PropTypes.arrayOf(PropTypes.object),
   logo: PropTypes.shape({
     // innerLink is for links that will direct the user within the app
     // it will be rendered as <Link to="...">...</Link> tag

@@ -107,3 +107,36 @@
     /* font-weight: bold; */
     font-size: ;
 }
+
+section#about {
+    /* background: #40A4C4; */
+    /* border-bottom: 1px solid #328AA7; */
+    color: white;
+}
+
+/* ABOUT US */
+h4 {
+    color: #109CF1;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 2.5em;
+    font-family: 'museo_sans700', sans-serif;
+    margin: 60px auto 10px;
+    text-align: center;
+}
+p#about-txt {
+    color: #323C47;
+    margin: auto 40px;
+}
+
+span.subhead {
+    color: #323C47;
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    position: relative;
+}

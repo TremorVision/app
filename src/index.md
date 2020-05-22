@@ -10,3 +10,6 @@ layout: admin
 title: "messages"
 permalink: /app/messages/
 
+layout: app
+title: "about"
+permalink: /app/about/
