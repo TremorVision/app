@@ -1,8 +1,7 @@
 import React, { useState, createRef, useRef } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-// import Canvas from '../dash/canvas'
 import CanvasDraw from 'react-canvas-draw'
-
+import moment from 'moment';
 
 class ModalTest extends React.Component {
     constructor(props) {
@@ -76,7 +75,10 @@ class ModalTest extends React.Component {
             resultText: text,
             spiralRes: img
         })
-
+        var btn = document.getElementById('btn-download');
+        btn.addEventListener('click', function (e) {
+            btn.href = img;
+        });
     }
 
     pingPlatform(e, img) {
@@ -147,7 +149,10 @@ class ModalTest extends React.Component {
                     >Retry</Button>{' '}
                     <Button
                         color="primary"
-                        onClick={() => { this.finishTest() }}
+                        id="btn-download"
+                        href="#"
+                        download={moment().format()}
+                        onClick={() => { this.downloadSpiral() }}
                     >Download</Button>
 
                     <Button

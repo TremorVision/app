@@ -75,8 +75,6 @@ class Sidebar extends React.Component {
     });
   };
 
-
-
   render() {
     const { bgColor, routes, logo } = this.props;
     let navbarBrandProps;
@@ -167,15 +165,6 @@ class Sidebar extends React.Component {
               <Row>
                 {logo ? (
                   <Col className="collapse-brand" xs="6">
-                    {/* {logo.innerLink ? (
-                      <Link to={logo.innerLink}>
-                        <img alt={logo.imgAlt} src={logo.imgSrc} />
-                      </Link>
-                    ) : (
-                      <a href={logo.outterLink}>
-                        <img alt={logo.imgAlt} src={logo.imgSrc} />
-                      </a>
-                    )} */}
                     Navigation
                   </Col>
                 ) : null}
@@ -201,13 +190,19 @@ class Sidebar extends React.Component {
             {/* Navigation */}
             <Nav className="mb-md-3" navbar>
               <NavItem>
-                <NavLink href="https://devpost.com/software/tremor-vision">
-                  About TremorVision
+                <NavLink
+                  to="/app/about"
+                  tag={NavLinkRRD}
+                  onClick={this.closeCollapse}
+                  activeClassName="active"
+                >
+                  {/* <i className="fas fa-users text-primary" /> */}
+                  About Us
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="mailto:tremorvisionapp@gmail.com">
-                  Contact us
+                  Contact Us
                 </NavLink>
               </NavItem>
             </Nav>

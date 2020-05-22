@@ -29,8 +29,8 @@ import moment from 'moment';
 import DonutWithText from '../components/dash/donutChart';
 
 import Modal from '../components/dash/modal';
-
 import {
+  Alert,
   Button,
   Card,
   CardHeader,
@@ -181,8 +181,10 @@ class Index extends React.Component {
                             </span>
                             <small class="text-muted ml-2">Dr. Drew Gallardo</small>
                           </div>
-
-                          <Button color="primary" id='task-btn' className='btn-msg' size="lg" type="button">{this.state.isFinished}</Button>
+                          <Alert id='task-btn' color="primary">
+                            {this.state.isFinished}
+                          </Alert>
+                          {/* <Button color="primary" id='task-btn' className='btn-msg' size="lg" type="button">{this.state.isFinished}</Button> */}
                         </div>
                       </Card>
                     </Col>
@@ -211,8 +213,8 @@ class Index extends React.Component {
                             </span>
                             <small class="text-muted ml-2">Dr.  Drew Gallardo</small>
                           </div>
-
-                          <Button color="primary" className='btn-msg' size="lg" type="button">Not Done</Button>
+                          <Alert color="primary">Not Done</Alert>
+                          {/* <Button color="primary" className='btn-msg' size="lg" type="button">Not Done</Button> */}
                         </div>
                       </Card>
                     </Col>
@@ -241,8 +243,8 @@ class Index extends React.Component {
                             </span>
                             <small class="text-muted ml-2">Dr. Drew Gallardo</small>
                           </div>
-
-                          <Button color="success" size="lg" type="button">Complete</Button>
+                          <Alert color="success">Complete</Alert>
+                          {/* <Button color="success" size="lg" type="button">Complete</Button> */}
                         </div>
                       </Card>
                     </Col>
