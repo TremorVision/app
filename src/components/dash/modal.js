@@ -10,7 +10,8 @@ class ModalTest extends React.Component {
             intructions: 'Trace the entire spiral and press evaluate.',
             modal: false,
             results: false,
-            resultText: ''
+            resultText: '',
+            percent: 0
         };
         this.toggle = this.toggle.bind(this);
     }
@@ -65,9 +66,15 @@ class ModalTest extends React.Component {
         if (healthyPercentage <= parkisonsPercentage) {
             percentage = (parkisonsPercentage * 100).toFixed(1);
             relation = <span className='bg-danger'> Parkinson's spirals </span>
+            this.setState({
+                percent: percentage * -1
+            })
         } else {
             percentage = (healthyPercentage * 100).toFixed(1);
             relation = <span className='bg-info'>healthy spirals</span>
+            this.setState({
+                percent: percentage
+            })
         }
         let text = <div>Our model shows that your spiral is {percentage}% similar to known {relation}</div>
         this.setState({
@@ -117,7 +124,8 @@ class ModalTest extends React.Component {
         property.innerHTML = "Complete";
         property.style.backgroundColor = "#2dce89";
         property.style.borderColor = "#2dce89";
-        this.props.callback();
+        this.props.callback(this.state.percent);
+        this.props.updateDataCallback(this.state.percent);
     }
 
     isCanvasBlank(e, data, dataURL) {

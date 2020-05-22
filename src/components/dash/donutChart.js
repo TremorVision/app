@@ -60,11 +60,14 @@ const options = {
 }
 
 class DonutWithText extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <div>
-        <Doughnut data={data} options={options}/>
+        <Doughnut data={this.props.data} options={options}/>
       </div>
     );
   }

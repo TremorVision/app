@@ -85,7 +85,19 @@ class Index extends React.Component {
       activeNav: 1,
       chartExample1Data: "data1",
       isFinished: "Not Done",
-      toDoMessage: "No data collected today, press the button below to get started."
+      toDoMessage: "No data collected today, press the button below to get started.",
+      data: {
+        datasets: [{
+          data: [82, 18],
+          backgroundColor: [
+            '#2DCE89',
+            '#11CDEF'],
+        }],
+        labels: [
+          'Healthy',
+          'Parkinson\'s'
+        ]
+      }
     };
     if (window.Chart) {
       parseOptions(Chart, chartOptions());
@@ -122,15 +134,43 @@ class Index extends React.Component {
     return days;
   }
 
-  spiralTestFinished = () => {
+  spiralTestFinished = (percent) => {
     this.setState({
       isFinished: "Complete",
-      toDoMessage: "You have completed all your tests today!"
+      toDoMessage: "You have completed all your tests today!",
+      spiralRes: percent
 
     })
     var property = document.getElementById("task-btn");
     property.style.backgroundColor = "#2dce89";
     property.style.borderColor = "#2dce89";
+  }
+
+  updateData = (result) => {
+    let newPercent = 0;
+    let newResult = [];
+    if (result > 0) {
+      newPercent = (this.state.data.datasets[0].data[0] + result) / 2;
+      newResult = [newPercent, 100 - newPercent];
+    } else {
+      newPercent = (this.state.data.datasets[0].data[1] + result * -1) / 2;
+      newResult = [100 - newPercent, newPercent];
+    }
+    let data = {
+      datasets: [{
+        data: newResult,
+        backgroundColor: [
+          '#2DCE89',
+          '#11CDEF'],
+      }],
+      labels: [
+        'Healthy',
+        'Parkinson\'s'
+      ]
+    }
+    this.setState({
+      data: data
+    })
   }
 
   render() {
@@ -269,7 +309,7 @@ class Index extends React.Component {
                       <Row>
                         <Col xs='6'>
 
-                          <DonutWithText />
+                          <DonutWithText data={this.state.data}/>
                           {/* <div className='circle oneline'> */}
                           {/* <Doughnut
                             data={data}
@@ -284,7 +324,7 @@ class Index extends React.Component {
                       </Row>
                       <div className='d-flex justify-content-between'>
                         <div></div>
-                        <Modal buttonLabel="Not Done" callback={this.spiralTestFinished}/> {/* pass in callback */}
+                        <Modal buttonLabel="Not Done" callback={this.spiralTestFinished} updateDataCallback={this.updateData}/> {/* pass in callback */}
                       </div>
                     </CardBody>
                   </Card>
