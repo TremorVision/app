@@ -160,6 +160,9 @@ class Index extends React.Component {
       newResult = [100 - newPercent, newPercent];
     }
     console.log(newResult);
+    newResult[0] = Math.round(newResult[0] * Math.pow(10,2)) / Math.pow(10,2)
+    newResult[1] = Math.round(newResult[1] * Math.pow(10,2)) / Math.pow(10,2)
+    console.log(newResult);
     let data = {
       datasets: [{
         data: newResult,
