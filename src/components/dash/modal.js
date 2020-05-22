@@ -73,7 +73,7 @@ class ModalTest extends React.Component {
             percentage = (healthyPercentage * 100).toFixed(1);
             relation = <span className='bg-info'>healthy spirals</span>
             this.setState({
-                percent: percentage
+                percent: percentage * 1
             })
         }
         let text = <div>Our model shows that your spiral is {percentage}% similar to known {relation}</div>

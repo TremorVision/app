@@ -147,15 +147,19 @@ class Index extends React.Component {
   }
 
   updateData = (result) => {
+    console.log(result);
+    console.log(this.state.data.datasets[0].data[0]);
+    console.log(this.state.data.datasets[0].data[1]);
     let newPercent = 0;
     let newResult = [];
     if (result > 0) {
       newPercent = (this.state.data.datasets[0].data[0] + result) / 2;
-      newResult = [newPercent.toFixed(1), (100 - newPercent).toFixed(1)];
+      newResult = [newPercent, 100 - newPercent];
     } else {
-      newPercent = (this.state.data.datasets[0].data[1] + result * -1) / 2;
+      newPercent = (this.state.data.datasets[0].data[1] + (result * -1)) / 2;
       newResult = [100 - newPercent, newPercent];
     }
+    console.log(newResult);
     let data = {
       datasets: [{
         data: newResult,
@@ -164,8 +168,8 @@ class Index extends React.Component {
           '#11CDEF'],
       }],
       labels: [
-        'Parkinson\'s',
-        'Healthy'
+        'Healthy',
+        'Parkinson\'s'
       ]
     }
     this.setState({

@@ -38,20 +38,6 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
   }
 });
 
-const data = {
-  datasets: [{
-    data: [82, 18],
-    backgroundColor: [
-      '#2DCE89',
-      '#11CDEF'
-    ]
-  }],
-  labels: [
-    'Healthy',
-    'Parkinson\'s'
-  ]
-};
-
 const options = {
   legend: {
     display: true,
