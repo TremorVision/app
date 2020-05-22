@@ -64,13 +64,13 @@ class About extends React.Component {
                     with a variety of symptoms that progressively worsen with time. Although there is no cure, 
                     treatment can be effective if PD is caught early enough. We found that there is no 
                     standardized way of evaluating the spiral test despite it being one of the most 
-                    commonly conducted tests to detect early-onset Parkinson’s and track its progression. 
+                    commonly conducted tests to detect early-onset PD and track its progression. 
                     </p>
                     <p></p>
                     <span class="subhead">Why TremorVision</span>
                     <p id="about-txt">
                     Using TremorVision, subtle tremors can be detected earlier. Giving patients a head start 
-                    in their fight against Parkinson’s.
+                    in their fight against PD.
 
                     Our tool empowers users to gain a holistic view of their health as it evolves over time, 
                     contributing to clinical decision support.

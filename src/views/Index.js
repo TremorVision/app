@@ -84,7 +84,8 @@ class Index extends React.Component {
     this.state = {
       activeNav: 1,
       chartExample1Data: "data1",
-      isFinished: "Not Done"
+      isFinished: "Not Done",
+      toDoMessage: "No data collected today, press the button below to get started."
     };
     if (window.Chart) {
       parseOptions(Chart, chartOptions());
@@ -123,7 +124,9 @@ class Index extends React.Component {
 
   spiralTestFinished = () => {
     this.setState({
-      isFinished: "Complete"
+      isFinished: "Complete",
+      toDoMessage: "You have completed all your tests today!"
+
     })
     var property = document.getElementById("task-btn");
     property.style.backgroundColor = "#2dce89";
@@ -277,7 +280,7 @@ class Index extends React.Component {
                           {/* </h1> */}
                           {/* </div> */}
                         </Col>
-                        <Col xs='6'>No data collected today, press the button below to get started.</Col>
+                        <Col xs='6'>{this.state.toDoMessage}</Col>
                       </Row>
                       <div className='d-flex justify-content-between'>
                         <div></div>
