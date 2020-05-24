@@ -1,15 +1,11 @@
-layout: admin
 title: "dashboard"
-permalink: /dashboard
+permalink: /app/dashboard/
 
-layout: admin
 title: "history"
-permalink: /history/
+permalink: /app/history/
 
-layout: admin
 title: "messages"
-permalink: /messages/
+permalink: /app/messages/
 
-layout: admin
 title: "about"
-permalink: /about/
+permalink: /app/about/

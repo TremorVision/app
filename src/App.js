@@ -21,12 +21,12 @@ class App extends Component {
         <header>
             <Sidebar/>
             <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/history" component={Dashboard} />
-                <Route exact path='/messages' component={Dashboard} />
-                <Route exact path="/about" component={About} />} />
-                <Redirect from="/" to="/dashboard" />
+                <Route exact path="/app" component={Dashboard} />
+                <Route exact path="/app/dashboard" component={Dashboard} />
+                <Route exact path="/app/history" component={Dashboard} />
+                <Route exact path='/app/messages' component={Dashboard} />
+                <Route exact path="/app/about" component={About} />} />
+                <Redirect from="/" to="/app/dashboard" />
             </Switch>
         </header>
         <main></main>

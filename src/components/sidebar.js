@@ -132,7 +132,7 @@ class Sidebar extends React.Component {
             <Nav navbar>
               <NavItem>
                 <NavLink
-                  to='/dashboard'
+                  to='/app/dashboard'
                   tag={NavLinkRRD}
                   onClick={this.closeCollapse}
                   activeClassName="active"
@@ -143,7 +143,7 @@ class Sidebar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to='/history'
+                  to='/app/history'
                   tag={NavLinkRRD}
                   onClick={this.closeCollapse}
                   activeClassName="active"
@@ -154,7 +154,7 @@ class Sidebar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to='/messages'
+                  to='/app/messages'
                   tag={NavLinkRRD}
                   onClick={this.closeCollapse}
                   activeClassName="active"
@@ -171,7 +171,7 @@ class Sidebar extends React.Component {
             <Nav navbar>
               <NavItem>
                 <NavLink
-                  to='/about'
+                  to='/app/about'
                   tag={NavLinkRRD}
                   onClick={this.closeCollapse}
                   activeClassName="active"
