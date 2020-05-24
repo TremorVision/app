@@ -16,7 +16,6 @@
 
 */
 import Index from "views/Index.js";
-import About from "views/About.js";
 import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 import Register from "views/examples/Register.js";
@@ -31,22 +30,19 @@ var routes = [
     path: "/index",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
-    component: Index,
-    layout: "/app"
+    component: Index
   },
   {
     path: "/history",
     name: "History",
     icon: "ni ni-bullet-list-67 text-primary",
-    component: Index,
-    layout: "/app"
+    component: Index
   },
   {
     path: "/messages",
     name: "Messages",
     icon: "ni ni-email-83 text-primary",
-    component: Index,
-    layout: "/app"
+    component: Index
   }
   // {
   //   path: "/icons",

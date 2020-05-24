@@ -17,15 +17,11 @@
 */
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// reactstrap components
-import { Container } from "reactstrap";
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import AdminFooter from "components/Footers/AdminFooter.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import Navigation from "components/navbar.js";
+import Sidebar from "components/sidebar.js";
 
 import routes from "routes.js";
-import aboutMe from "aboutMe.js";
 
 class Admin extends React.Component {
   componentDidUpdate(e) {
@@ -34,39 +30,15 @@ class Admin extends React.Component {
     this.refs.mainContent.scrollTop = 0;
   }
   getRoutes = routes => {
-    return routes.map((prop, key) => {
-      if (prop.layout === "/app") {
-        console.log(prop.layout + prop.path);
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
+    return (
+      <Route
+        path={prop.layout + prop.path}
+        component={prop.component}
+        key={key}
+      />
+    );
   };
 
-  getAboutMeRoute = aboutMe => {
-    return aboutMe.map((prop, key) => {
-      if (prop.layout === "/app") {
-        console.log(prop.layout + prop.path);
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
-  
   getBrandText = path => {
     for (let i = 0; i < routes.length; i++) {
       if (
@@ -80,38 +52,22 @@ class Admin extends React.Component {
     return "Brand";
   };
 
-  getAboutMeBrandText = path => {
-    for (let i = 0; i < aboutMe.length; i++) {
-      if (
-        this.props.location.pathname.indexOf(
-          aboutMe[i].layout + aboutMe[i].path
-        ) !== -1
-      ) {
-        return aboutMe[i].name;
-      }
-    }
-    return "Brand";
-  };
-
   render() {
     return (
       <>
         <Sidebar
           {...this.props}
-          routes={routes}
-          aboutMe={aboutMe}
         />
         <div className="main-content" ref="mainContent">
 
-          <AdminNavbar
+          <Navigation
             {...this.props}
             brandText={this.getBrandText(this.props.location.pathname)}
           />
           
           <Switch>
             {this.getRoutes(routes)}
-            {this.getAboutMeRoute(aboutMe)}
-            <Redirect from="*" to="/app/index" />
+            <Redirect from="*" to="/dashboard" />
           </Switch>
 
 

@@ -1,4 +1,4 @@
-import React, { useState, createRef, useRef } from 'react';
+import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import CanvasDraw from 'react-canvas-draw'
 import moment from 'moment';
@@ -31,15 +31,19 @@ class ModalTest extends React.Component {
 
     makeblob(dataURL) {
         var BASE64_MARKER = ';base64,';
-        if (dataURL.indexOf(BASE64_MARKER) == -1) {
-            var parts = dataURL.split(',');
-            var contentType = parts[0].split(':')[1];
-            var raw = decodeURIComponent(parts[1]);
+        var parts;
+        var contentType;
+        var raw;
+
+        if (dataURL.indexOf(BASE64_MARKER) === -1) {
+            parts = dataURL.split(',');
+            contentType = parts[0].split(':')[1];
+            raw = decodeURIComponent(parts[1]);
             return new Blob([raw], { type: contentType });
         }
-        var parts = dataURL.split(BASE64_MARKER);
-        var contentType = parts[0].split(':')[1];
-        var raw = window.atob(parts[1]);
+        parts = dataURL.split(BASE64_MARKER);
+        contentType = parts[0].split(':')[1];
+        raw = window.atob(parts[1]);
         var rawLength = raw.length;
 
         var uInt8Array = new Uint8Array(rawLength);
@@ -129,7 +133,7 @@ class ModalTest extends React.Component {
     }
 
     isCanvasBlank(e, data, dataURL) {
-        if (JSON.parse(data)["lines"].length == 0) {
+        if (JSON.parse(data)["lines"].length === 0) {
             this.setState({
                 intructions: 'Please trace the entire spiral before evaluating.'
             })
@@ -137,7 +141,7 @@ class ModalTest extends React.Component {
             property.classList.add("fading");
             setTimeout(function(){property.classList.remove("fading");}, 1000);
         } else {
-            { this.pingPlatform(e, dataURL) }
+            this.pingPlatform(e, dataURL)
         }
     }
 
@@ -148,7 +152,7 @@ class ModalTest extends React.Component {
                 <ModalBody>
                     <h3>{this.state.resultText}</h3>
                     <p className='text-muted'>Click finish for your results to be logged and sent to your doctor. You may also personally download your image or try again.</p>
-                    <img src={this.state.spiralRes} className='img-thumbnail mx-auto small-img'></img>
+                    <img alt="Guide Spiral" src={this.state.spiralRes} className='img-thumbnail mx-auto small-img'></img>
                 </ModalBody>
                 <ModalFooter>
                     <Button
@@ -192,7 +196,7 @@ class ModalTest extends React.Component {
                     <Button
                         color="secondary"
                         onClick={() => { this.saveableCanvas.clear() }}
-                    >Clear</Button>{' '}
+                    >Clear</Button>
                     
                     <Button
                         color="primary"
