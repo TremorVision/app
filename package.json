@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
   },
-  "homepage": "https://tremorvision.github.io/app",
+  "homepage": "https://tremorvision.azurewebsites.net/",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
