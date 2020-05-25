@@ -1,15 +1,11 @@
-layout: admin
-title: "index"
-permalink: /app/index/
+title: "dashboard"
+permalink: /app/dashboard/
 
-layout: admin
 title: "history"
 permalink: /app/history/
 
-layout: admin
 title: "messages"
 permalink: /app/messages/
 
-layout: admin
 title: "about"
 permalink: /app/about/

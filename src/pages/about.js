@@ -1,13 +1,7 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-// core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import AdminFooter from "components/Footers/AdminFooter.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import Navigation from "components/navbar.js";
 
-// reactstrap components
 import {
-  Button,
   Card,
   CardBody,
   CardImg,
@@ -19,13 +13,13 @@ import {
 } from "reactstrap";
 
 class About extends React.Component {
-
   render() {
     return (
       <>
-
-      <Container className="pb-4 pt-5 pt-md-6" fluid>
-      <Col>
+        <div className="main-content">       
+        <Navigation /> 
+        <Container className="pb-4 pt-5 pt-md-6" fluid>
+        <Col>
         <Card className='shadow-lg'>
             <Row className='w-100 mx-auto'>
             <section id="about">
@@ -138,9 +132,8 @@ class About extends React.Component {
             </CardBody>
         </Card>
       </Col>
-        
       </Container>
-
+    </div>
       </>
     );
   }

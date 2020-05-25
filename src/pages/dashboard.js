@@ -18,10 +18,17 @@
 import React from "react";
 import classnames from "classnames";
 import Chart from "chart.js";
-import { Line } from "react-chartjs-2";
 import moment from 'moment';
+import { Line } from "react-chartjs-2";
 import DonutWithText from '../components/donutChart';
 import Modal from '../components/modal';
+import Navigation from "components/navbar.js";
+
+import {
+  chartOptions,
+  parseOptions,
+  chartExample1
+} from "components/charts.js";
 
 import {
   Alert,
@@ -39,34 +46,11 @@ import {
   CardText
 } from "reactstrap";
 
-import {
-  chartOptions,
-  parseOptions,
-  chartExample1
-} from "components/charts.js";
+const defaultData = [82, 18];
+const backgroundColor = ['#2DCE89', '#11CDEF'];
+const labels = ['Healthy', 'Parkinson\'s'];
 
-const data = {
-  datasets: [{
-    data: [82, 18],
-    backgroundColor: [
-      '#2DCE89',
-      '#11CDEF'
-    ]
-  }],
-  labels: [
-    'Healthy',
-    'Parkinson\'s'
-  ]
-};
-
-const info = {
-  legend: {
-    display: true,
-    position: 'bottom'
-  },
-}
-
-class Index extends React.Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,15 +60,10 @@ class Index extends React.Component {
       toDoMessage: "No data collected today, press the button below to get started.",
       data: {
         datasets: [{
-          data: [82, 18],
-          backgroundColor: [
-            '#2DCE89',
-            '#11CDEF'],
+          data: defaultData,
+          backgroundColor: backgroundColor,
         }],
-        labels: [
-          'Healthy',
-          'Parkinson\'s'
-        ]
+        labels: labels
       }
     };
     if (window.Chart) {
@@ -93,7 +72,7 @@ class Index extends React.Component {
   }
   toggleNavs = (e, index) => {
     e.preventDefault();
-    if (this.state.activeNav != index) {
+    if (this.state.activeNav !== index) {
       this.setState({
         activeNav: index,
         chartExample1Data:
@@ -135,12 +114,8 @@ class Index extends React.Component {
         <Col className='px-0'>
           <Card className='shadow-lg p-3 mb-4 bg-white rounded task'>
             <Row className='d-flex justify-content-between'>
-              <Col sm='8'>
-                <CardTitle className='task-title mb-0 pb-0'>Complete your Parkinson’s Test</CardTitle>
-              </Col>
-              <Col sm='2'>
-                <CardText><small class="text-muted">Reminder</small></CardText>
-              </Col>
+              <Col sm='8'><CardTitle className='task-title mb-0 pb-0'>Complete your Parkinson’s Test</CardTitle></Col>
+              <Col sm='2'><CardText><small class="text-muted">Reminder</small></CardText></Col>
             </Row>
             <Row><Col><small class="text-muted">Due date: {day} </small></Col></Row>
 
@@ -154,9 +129,7 @@ class Index extends React.Component {
                 </span>
                 <small class="text-muted ml-2">Dr. Drew Gallardo</small>
               </div>
-              <Alert id='task-btn' color="success">
-                Complete
-              </Alert>
+              <Alert id='task-btn' color="success">Complete</Alert>
               {/* <Button color="primary" id='task-btn' className='btn-msg' size="lg" type="button">{this.state.isFinished}</Button> */}
             </div>
           </Card>
@@ -181,9 +154,6 @@ class Index extends React.Component {
   }
 
   updateData = (result) => {
-    console.log(result);
-    console.log(this.state.data.datasets[0].data[0]);
-    console.log(this.state.data.datasets[0].data[1]);
     let newPercent = 0;
     let newResult = [];
     if (result > 0) {
@@ -193,21 +163,17 @@ class Index extends React.Component {
       newPercent = (this.state.data.datasets[0].data[1] + (result * -1)) / 2;
       newResult = [100 - newPercent, newPercent];
     }
-    console.log(newResult);
+
+    // round data
     newResult[0] = Math.round(newResult[0] * Math.pow(10,2)) / Math.pow(10,2)
     newResult[1] = Math.round(newResult[1] * Math.pow(10,2)) / Math.pow(10,2)
-    console.log(newResult);
+
     let data = {
       datasets: [{
         data: newResult,
-        backgroundColor: [
-          '#2DCE89',
-          '#11CDEF'],
+        backgroundColor: backgroundColor,
       }],
-      labels: [
-        'Healthy',
-        'Parkinson\'s'
-      ]
+      labels: labels
     }
     this.setState({
       data: data
@@ -217,8 +183,9 @@ class Index extends React.Component {
   render() {
     return (
       <>
+      <div className="main-content">
+        <Navigation/> 
         <Container className="pb-4 pt-5 pt-md-6" fluid>
-
           <Row>
             <Col className="mb-5 mb-xl-0" xl="7">
               <Card className='shadow-lg'>
@@ -331,7 +298,6 @@ class Index extends React.Component {
                       </Card>
                     </Col>
                   </Row>
-                  {this.getTasks()}
                   <Row><Col><div className='mx-auto day dayActive'>Show More</div></Col></Row>
                 </CardBody>
               </Card>
@@ -347,7 +313,6 @@ class Index extends React.Component {
                     <CardBody>
                       <Row>
                         <Col xs='6'>
-
                           <DonutWithText data={this.state.data}/>
                         </Col>
                         <Col xs='6'>{this.state.toDoMessage}</Col>
@@ -418,9 +383,10 @@ class Index extends React.Component {
             </Col>
           </Row>
         </Container>
+      </div>
       </>
     );
   }
 }
 
-export default Index;
+export default Dashboard;

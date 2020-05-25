@@ -17,25 +17,18 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
   DropdownToggle,
-  Form,
-  FormGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Input,
-  InputGroup,
   Navbar,
   Nav,
   Container,
   Media
 } from "reactstrap";
 
-class AdminNavbar extends React.Component {
+class Navigation extends React.Component {
   render() {
     return (
       <>
@@ -45,7 +38,6 @@ class AdminNavbar extends React.Component {
               className="h4 mb-0 text-uppercase d-none d-lg-inline-block"
               to="/"
             >
-              {/* {this.props.brandText} */}
             </Link>
             
             <Nav className="align-items-center d-none d-md-flex" navbar>
@@ -55,12 +47,12 @@ class AdminNavbar extends React.Component {
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="..."
-                        src={require("assets/img/theme/janae.png")}
+                        src={require("assets/img/janae.png")}
                       />
                     </span>
                     <Media className="ml-2 d-none d-lg-block">
                       <span className="mb-0 text-sm font-weight-bold .font-darker">
-                         Janae Chan {/* replace with user name*/}
+                         Janae Chan
                       </span>
                     </Media>
                   </Media>
@@ -69,17 +61,13 @@ class AdminNavbar extends React.Component {
                   <DropdownItem className="noti-title" header tag="div">
                     <h6 className="text-overflow m-0">Welcome!</h6>
                   </DropdownItem>
-                  <DropdownItem to="/app/user-profile" tag={Link}>
+                  <DropdownItem to="/user-profile" tag={Link}>
                     <i className="ni ni-single-02" />
                     <span>My profile</span>
                   </DropdownItem>
-                  <DropdownItem to="/app/user-profile" tag={Link}>
+                  <DropdownItem to="/user-profile" tag={Link}>
                     <i className="ni ni-settings-gear-65" />
                     <span>Settings</span>
-                  </DropdownItem>
-                  <DropdownItem to="/app/user-profile" tag={Link}>
-                    <i className="ni ni-support-16" />
-                    <span>Support</span>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
@@ -96,4 +84,4 @@ class AdminNavbar extends React.Component {
   }
 }
 
-export default AdminNavbar;
+export default Navigation;

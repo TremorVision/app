@@ -97,7 +97,7 @@ class AdminNavbar extends React.Component {
                 <NavItem>
                   <NavLink
                     className="nav-link-icon"
-                    to="/app/user-profile"
+                    to="/user-profile"
                     tag={Link}
                   >
                     <i className="ni ni-single-02" />

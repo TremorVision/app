@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Doughnut, Chart} from 'react-chartjs-2';
 
 // some of this code is a variation on https://jsfiddle.net/cmyker/u6rr5moq/
@@ -10,16 +9,18 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
     
     var chart = this.chart;
     var width = chart.chart.width;
-    if (width > 205) {
-      var height = chart.chart.height * 0.8;
-      var fontSize = (height / 50).toFixed(2); //def: 114
-    } else {
-      var height = chart.chart.height * 0.6;
-      var fontSize = (height / 50).toFixed(2); //def: 114
-    }
-    var ctx = chart.chart.ctx;
+    var height;
+    var fontSize;
 
-    
+    if (width > 205) {
+      height = chart.chart.height * 0.8;
+      fontSize = (height / 50).toFixed(2); //def: 114
+    } else {
+      height = chart.chart.height * 0.6;
+      fontSize = (height / 50).toFixed(2); //def: 114
+    }
+
+    var ctx = chart.chart.ctx;
     ctx.font = 'bold ' + fontSize + "em poppins";
     ctx.textBaseline = "middle";
     
@@ -50,10 +51,6 @@ const options = {
 }
 
 class DonutWithText extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
