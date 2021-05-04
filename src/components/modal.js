@@ -58,7 +58,7 @@ class ModalTest extends React.Component {
     populateResult(data, img) {
         let parkisonsPercentage;
         let healthyPercentage;
-        if (data.predictions[0].tagName === 'parkinson') {
+        if (data.predictions[0].tagName.toLowerCase() === 'parkinson') {
             parkisonsPercentage = data.predictions[0].probability;
             healthyPercentage = data.predictions[1].probability;
         } else {
@@ -164,7 +164,6 @@ class ModalTest extends React.Component {
                         id="btn-download"
                         href="#"
                         download={moment().format()}
-                        onClick={() => { this.downloadSpiral() }}
                     >Download</Button>
 
                     <Button
