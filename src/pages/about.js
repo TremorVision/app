@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "components/navbar.js";
+import Sidebar from "components/sidebar.js";
 
 import {
   Card,
@@ -16,6 +17,7 @@ class About extends React.Component {
   render() {
     return (
       <>
+        <Sidebar />
         <div className="main-content">       
         <Navigation /> 
         <Container className="pb-4 pt-5 pt-md-6" fluid>

@@ -163,6 +163,17 @@ class Sidebar extends React.Component {
                   Messages
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink
+                  to='/app/login'
+                  tag={NavLinkRRD}
+                  onClick={this.closeCollapse}
+                  activeClassName="active"
+                >
+                  <i className={'ni ni-key-25 text-info'} />
+                  Login
+                </NavLink>
+              </NavItem>
             </Nav>
 
             {/* Divider */}

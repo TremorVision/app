@@ -8,6 +8,7 @@ import "assets/css/index.css";
 import Sidebar from "./components/sidebar.js";
 import Dashboard from "./pages/dashboard.js";
 import About from "./pages/about.js";
+import Login from "./pages/login.js";
 
 
 class App extends Component {
@@ -19,13 +20,14 @@ class App extends Component {
     return (
       <div>
         <header>
-            <Sidebar/>
             <Switch>
                 <Route exact path="/app" component={Dashboard} />
                 <Route exact path="/app/dashboard" component={Dashboard} />
                 <Route exact path="/app/history" component={Dashboard} />
                 <Route exact path='/app/messages' component={Dashboard} />
                 <Route exact path="/app/about" component={About} />} />
+                <Route exact path="/app/signup" component={About} />} />
+                <Route exact path="/app/login" component={Login} />} />
                 <Redirect from="/" to="/app/dashboard" />
             </Switch>
         </header>

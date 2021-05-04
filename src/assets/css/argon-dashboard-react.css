@@ -10370,7 +10370,7 @@ a.btn-icon-only {
     outline: none; }
     .close:hover span:not(.sr-only), .close:focus span:not(.sr-only) {
       background-color: transparent; }
-
+      
 .main-content {
   position: relative; }
   .main-content .navbar-top {

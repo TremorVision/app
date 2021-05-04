@@ -131,3 +131,8 @@ span.subhead {
     position: relative;
     padding: 25px 0px 10px 0px;
 }
+
+/* LOG IN */
+.login-content { 
+    margin: auto;
+    border: 3px solid green;}

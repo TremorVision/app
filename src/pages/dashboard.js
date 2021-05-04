@@ -23,6 +23,7 @@ import { Line } from "react-chartjs-2";
 import DonutWithText from '../components/donutChart';
 import Modal from '../components/modal';
 import Navigation from "components/navbar.js";
+import Sidebar from "components/sidebar.js";
 
 import {
   chartOptions,
@@ -183,8 +184,9 @@ class Dashboard extends React.Component {
   render() {
     return (
       <>
+      <Sidebar />
       <div className="main-content">
-        <Navigation/> 
+        <Navigation /> 
         <Container className="pb-4 pt-5 pt-md-6" fluid>
           <Row>
             <Col className="mb-5 mb-xl-0" xl="7">
