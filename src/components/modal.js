@@ -99,9 +99,9 @@ class ModalTest extends React.Component {
         // const req = new Request()
         fetch(url, {
             headers: {
-                "Prediction-Key": "78a3f4d1ae95492680685c14da50480d",
+                "Prediction-Key": "61a495fb20ab4dd994b98970a1427408",
                 "Content-Type": "application/octet-stream",
-                "Prediction-key": "78a3f4d1ae95492680685c14da50480d"
+                "Prediction-key": "61a495fb20ab4dd994b98970a1427408"
             },
             method: 'POST',
             // processData: false,
