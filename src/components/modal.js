@@ -58,7 +58,7 @@ class ModalTest extends React.Component {
     populateResult(data, img) {
         let parkisonsPercentage;
         let healthyPercentage;
-        if (data.predictions[0].tagName === 'parkinson') {
+        if (data.predictions[0].tagName.toLowerCase() === 'parkinson') {
             parkisonsPercentage = data.predictions[0].probability;
             healthyPercentage = data.predictions[1].probability;
         } else {
@@ -94,14 +94,14 @@ class ModalTest extends React.Component {
 
     pingPlatform(e, img) {
         e.preventDefault();
-        let url = "https://westus2.api.cognitive.microsoft.com/customvision/v3.0/Prediction/6fede207-de99-4fbe-8f04-44a2154495ad/classify/iterations/Iteration8/image";
+        let url = "https://customvisionboth2.cognitiveservices.azure.com/customvision/v3.0/Prediction/2f4ad2d4-63bb-4b49-aac0-c34209dcaf19/classify/iterations/TremorVision2Iteration1/image";
         let imgBlob = this.makeblob(img);
         // const req = new Request()
         fetch(url, {
             headers: {
-                "Prediction-Key": "78a3f4d1ae95492680685c14da50480d",
+                "Prediction-Key": "61a495fb20ab4dd994b98970a1427408",
                 "Content-Type": "application/octet-stream",
-                "Prediction-key": "78a3f4d1ae95492680685c14da50480d"
+                "Prediction-key": "61a495fb20ab4dd994b98970a1427408"
             },
             method: 'POST',
             // processData: false,
@@ -164,7 +164,6 @@ class ModalTest extends React.Component {
                         id="btn-download"
                         href="#"
                         download={moment().format()}
-                        onClick={() => { this.downloadSpiral() }}
                     >Download</Button>
 
                     <Button
