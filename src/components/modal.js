@@ -94,14 +94,13 @@ class ModalTest extends React.Component {
 
     pingPlatform(e, img) {
         e.preventDefault();
-        let url = "https://customvisionboth2.cognitiveservices.azure.com/customvision/v3.0/Prediction/2f4ad2d4-63bb-4b49-aac0-c34209dcaf19/classify/iterations/TremorVision2Iteration1/image";
+        let url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.1/Prediction/c6ee0724-e2fc-446c-9dfd-f1cef6f40479/classify/iterations/Iteration4/image";
         let imgBlob = this.makeblob(img);
         // const req = new Request()
         fetch(url, {
             headers: {
-                "Prediction-Key": "61a495fb20ab4dd994b98970a1427408",
-                "Content-Type": "application/octet-stream",
-                "Prediction-key": "61a495fb20ab4dd994b98970a1427408"
+                "Prediction-Key": "89884caaab6a49b08c7988717547d4f8",
+                "Content-Type": "application/octet-stream"
             },
             method: 'POST',
             // processData: false,
