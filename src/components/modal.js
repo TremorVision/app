@@ -94,7 +94,7 @@ class ModalTest extends React.Component {
 
     pingPlatform(e, img) {
         e.preventDefault();
-        let url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.1/Prediction/c6ee0724-e2fc-446c-9dfd-f1cef6f40479/classify/iterations/Iteration4/image";
+        let url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.1/Prediction/c6ee0724-e2fc-446c-9dfd-f1cef6f40479/classify/iterations/Iteration5/image";
         let imgBlob = this.makeblob(img);
         // const req = new Request()
         fetch(url, {
